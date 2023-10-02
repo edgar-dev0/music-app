@@ -20,11 +20,11 @@ const RegisterPage = () => {
 
 
   return (
-    <div>
+    <div className='login__container'>
       <img className="login__image" src="/images/img-login2.jpg" alt="login image" />
       <article>
         <h2>New account</h2>
-        <form onSubmit={handleSubmit(submit)}>
+        <form className="login__form" onSubmit={handleSubmit(submit)}>
           <div>
             <label htmlFor="email">Email</label>
             <input {...register('email')} type="email" id="email"/>

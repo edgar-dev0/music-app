@@ -19,11 +19,11 @@ const LoginPage = () => {
   }
 
   return (
-    <div>
+    <div className='login__container'>
       <img className="login__image" src="/images/img-login.jpg" alt="login image" />
       <article>
         <h2>Log in</h2>
-        <form onSubmit={handleSubmit(submit)}>
+        <form className="login__form" onSubmit={handleSubmit(submit)}>
           <div>
             <label htmlFor="email">E-mail</label>
             <input {...register('email')} type="email" id="email"/>
