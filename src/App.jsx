@@ -22,7 +22,6 @@ function App() {
 
   return (
     <div>
-      <h1>Gift Music</h1>
       <Routes>
         <Route path='/auth/login' element={<LoginPage /> } />
         <Route path='/auth/register' element={<RegisterPage />} />

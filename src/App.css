@@ -23,3 +23,21 @@
   border-radius: 0.7em;
   max-height: 500px;
 }
+
+.card {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+}
+
+.card__image {
+  width: 120px;
+}
+
+.card__button {
+  font-size: 24px;
+  padding: 4px;
+}
+
