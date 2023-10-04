@@ -1,11 +1,18 @@
 import { useDispatch } from "react-redux"
 import { addTrack } from "../../store/slices/tracks.slice"
+import { Link, useNavigate } from "react-router-dom"
 
 const TrackCard = ({ track }) => {
 
   const dispatch = useDispatch()
+  const navigate = useNavigate()
+  
   const handleAddTrack = () => {
     dispatch(addTrack(track))
+  }
+
+  const handleArtist = (id) => {
+    navigate(`/artist/${id}`)
   }
 
   return (
@@ -14,11 +21,14 @@ const TrackCard = ({ track }) => {
         <img className="card__image" src={track.album.images[1].url} alt="" />
       </figure>
       <section>
-        <h3>{track.name}</h3>
+        <Link to={`/track/${track.id}`}><h3>{track.name}</h3></Link>
         <ul>
           {
             track.artists.map(artist => (
-              <li key={artist.id}>{artist.name}</li>
+              <li 
+                onClick={() => handleArtist(artist.id)}
+                key={artist.id}>{artist.name}
+              </li>
             ))
           }
         </ul>
