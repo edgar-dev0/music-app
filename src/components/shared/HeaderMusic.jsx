@@ -22,7 +22,8 @@ const HeaderMusic = () => {
       ...data,
       tracks: tracksPlayList.map(track => ({id: track.id}))
     }
-    postPlaylist(data)
+    console.log(obj)
+    postPlaylist(obj)
     reset({
       title: '',
       to: '',

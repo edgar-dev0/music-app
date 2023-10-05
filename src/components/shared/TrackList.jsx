@@ -1,4 +1,3 @@
-import React from 'react'
 import { useDispatch } from 'react-redux'
 import { deleteTrack } from '../../store/slices/tracks.slice'
 
@@ -6,6 +5,7 @@ import { deleteTrack } from '../../store/slices/tracks.slice'
 const TrackList = ({ track }) => {
 
   const dispatch = useDispatch()
+
   const handleRemoveTrack = () => {
     dispatch(deleteTrack(track))
   }
@@ -26,7 +26,7 @@ const TrackList = ({ track }) => {
         </ul>
       </section>
       <section>
-        <button onClick={handleRemoveTrack} className="card__button">
+        <button className="card__button" onClick={handleRemoveTrack} >
           <i class='bx bx-minus-circle'></i>
         </button>
       </section>
