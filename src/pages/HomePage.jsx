@@ -32,13 +32,16 @@ const HomePage = () => {
 
   return (
     <div>
-      <div>
-        <form onSubmit={handleSearch}>
-          <input ref={inputSearch} type="text" />
+      <div className="tracks__container">
+        <form className="tracks__container__form" onSubmit={handleSearch}>
+          <div className="search__container">
+            <i class='bx bx-search-alt-2'></i>
+            <input ref={inputSearch} type="text" placeholder=""/>
+          </div>
           <select onChange={handleTracksPerPage} defaultValue={10}>
             {
               [3, 5, 10, 20].map(tracksPerPage => (
-                <option
+                <option className="form__select__option"
                   key={tracksPerPage}
                   value={tracksPerPage}
                 >{tracksPerPage}</option>
@@ -46,7 +49,7 @@ const HomePage = () => {
             }
           </select>
         </form>
-        <div>
+        <div className="tracks__container__list">
           {
             listTracks?.tracks.items.map(track => (
               <TrackCard 

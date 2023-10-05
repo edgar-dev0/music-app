@@ -33,11 +33,11 @@ const TrackCard = ({ track }) => {
           }
         </ul>
       </section>
-      <section>
+      <section className="card__container__buttons">
         <a className="card__button" target="_blank" href={track.external_urls.spotify}>
           <i className='bx bxl-spotify'></i>
         </a>
-        <button onClick={handleAddTrack} className="card__button">
+        <button className="card__button" onClick={handleAddTrack}>
           <i className='bx bx-plus-circle'></i>
         </button>
       </section>

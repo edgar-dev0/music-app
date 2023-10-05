@@ -20,15 +20,17 @@ const LoginPage = () => {
 
   return (
     <div className='login__container'>
-      <img className="login__image" src="/images/img-login.jpg" alt="login image" />
+      <figure>
+        <img className="login__image" src="/images/img-login.jpg" alt="login image" />
+      </figure>
       <article>
         <h2>Log in</h2>
         <form className="login__form" onSubmit={handleSubmit(submit)}>
-          <div>
+          <div className='login__form__input'>
             <label htmlFor="email">E-mail</label>
             <input {...register('email')} type="email" id="email"/>
           </div>
-          <div>
+          <div className='login__form__input'>
             <label htmlFor="password">Password</label>
             <input {...register('password')} type="password" id="password"/>
           </div>
